@@ -1,4 +1,4 @@
-import ButtonInterface from '../interface/button'
+import ButtonInterface from '../interface/IButton'
 
 const Button: React.FC<ButtonInterface> = ({ border, children, color }) => {
   return (

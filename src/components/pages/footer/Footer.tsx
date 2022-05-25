@@ -1,6 +1,6 @@
 import { faGithub, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import ButtonInterface from '../../../interface/button'
+import ButtonInterface from '../../../interface/IButton'
 import IContactList from '../../../interface/IContactList'
 
 function Footer(props: ButtonInterface) {
