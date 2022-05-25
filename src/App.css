@@ -1,5 +1,30 @@
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.main {
+  min-height: 100vh;
+  background: white;
+  position: relative;
+  z-index: 1;
+}
+
+.footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  background: #252a47;
+  height: 400px;
+}
+
+//************//
+//************//
+
 .App {
   text-align: center;
+  background-color: whitesmoke;
 }
 
 .App-logo {
