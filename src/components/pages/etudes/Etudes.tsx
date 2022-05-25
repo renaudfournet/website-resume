@@ -26,20 +26,20 @@ function Etudes() {
     <a.div
       onMouseOver={showMore}
       style={{ opacity: opacity.to(o => 1 - o), transform }}
-      className="bg-white w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 rounded-lg border bg-white-100 card-home"
+      className="w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 rounded-lg bg-white-100"
     >
-      <div className="text-primary-100 flex justify-center mt-10">
-        <FontAwesomeIcon className="text-6xl" icon={faGraduationCap} />
+      <div className="text-primary-100 flex justify-center">
+        <FontAwesomeIcon className="text-6xl mt-10" icon={faGraduationCap} />
       </div>
       <div className="overflow-auto no-scrollbar mt-4">
         <div className="p-10 flex justify-center">
-          <p className="flex font-bold text-1xl xs:text-4xl sm:text-4xl text-primary-100 ">
-            Études
+          <p className="flex font-black text-1xl xs:text-4xl sm:text-4xl text-primary-100">
+            FORMATIONS
           </p>
         </div>
       </div>
       <div className="flex items-center text-primary-100 absolute p-4 bottom-0 right-0 ">
-        <p className="text-xs font-bold">Voir</p>&nbsp;&nbsp;
+        <p className="text-xs font-bold">En savoir plus</p>&nbsp;&nbsp;
         <FontAwesomeIcon icon={faArrowRight} />
       </div>
     </a.div>
@@ -51,7 +51,7 @@ function Etudes() {
         transform,
         rotateX: '180deg'
       }}
-      className="flex bg-white w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 rounded-lg border bg-white-100 card-home"
+      className="flex bg-white w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 rounded-lg bg-white-100"
     >
       <div className="relative overflow-auto no-scrollbar">
         <div className="flex flex-col p-6 static ">

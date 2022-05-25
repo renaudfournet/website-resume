@@ -1,11 +1,11 @@
 import ButtonInterface from '../interface/IButton'
 
-const Button: React.FC<ButtonInterface> = ({ border, children, color }) => {
+const Button: React.FC<ButtonInterface> = ({ children, color, background }) => {
   return (
     <>
       <button
-        style={{ borderColor: border, color: color }}
-        className="flex font-bold py-2 px-4 border rounded"
+        style={{ color: color, backgroundColor: background }}
+        className="flex font-bold py-2 px-4 border rounded-xl"
       >
         {children}
       </button>

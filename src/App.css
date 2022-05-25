@@ -4,7 +4,7 @@
 
 .main {
   min-height: 100vh;
-  background: white;
+  background: #f2f2f2;
   position: relative;
   z-index: 1;
 }
@@ -14,9 +14,30 @@
   bottom: 0;
   left: 0;
   width: 100%;
-
   background: #252a47;
   height: 400px;
+}
+
+.stroke {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #365ded;
+}
+
+.vertical {
+  border-left: 3px solid #365ded;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+}
+
+.line-horizontal-blue {
+  width: 40px;
+  border-top: 4px solid #365ded;
+}
+
+.line-horizontal-white {
+  width: 40px;
+  border-top: 4px solid #ffffff;
 }
 
 //************//
@@ -24,7 +45,6 @@
 
 .App {
   text-align: center;
-  background-color: whitesmoke;
 }
 
 .App-logo {

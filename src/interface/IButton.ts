@@ -1,8 +1,8 @@
 interface ButtonInterface {
   children?: React.ReactNode
   icon?: any
-  border: string
   color: string
+  background: string
 }
 
 export default ButtonInterface

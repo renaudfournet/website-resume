@@ -26,18 +26,22 @@ function Home(props: any) {
   return (
     <>
       <div className="main">
-        <div className="xxs:mb-8 xxs:pb-8 xs:mb-8 xs:pb-8 w-full xs:h-auto sm:h-40 md:h-40 lg:h-40 flex flex-wrap justify-between px-7 mt-4">
+        <div className="w-full xs:h-auto sm:h-30 md:h-30 lg:h-30 flex flex-wrap justify-between px-7 mt-4">
           <div>
             <Profil />
           </div>
           <a href="mailto:fournet.renaud@gmail.com">
-            <Button color="black" border="black">
-              ME CONTACTER
+            <Button background="#365DED" color="black">
+              <span className="font-black text-white-100 tracking-wide">ME CONTACTER</span>
             </Button>
           </a>
         </div>
+        <div className="flex justify-center mt-20">
+          <p className="text-whitesmoke-100 text-7xl font-black stroke tracking-widest">BONJOUR</p>
+          <div className="vertical mt-40"></div>
+        </div>
 
-        <div className="grid justify-items-center md:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 xs:gap-8 gap-6 xs:-mt-0 lg:px-40 xs:px-0">
+        <div className="grid justify-items-center md:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 xs:gap-8 gap-6 xs:-mt-0 lg:px-40 xs:px-0 pt-72">
           <div>
             <Infos />
           </div>
@@ -47,15 +51,14 @@ function Home(props: any) {
           <div>
             <Experience />
           </div>
-
           <div>
-            <Etudes />
+            <Portfolio />
           </div>
           <div className="mb-10">
             <Interests />
           </div>
           <div className="mb-10">
-            <Portfolio />
+            <Etudes />
           </div>
         </div>
         <div className="flex justify-center">
@@ -65,8 +68,8 @@ function Home(props: any) {
             download="Renaud_Fournet_resume"
           >
             <div className="mt-20 mb-20">
-              <Button color="black" border="black" icon={<DocumentTextOutline />}>
-                TÉLÉCHARGER CV
+              <Button background="#365DED" color="black" icon={<DocumentTextOutline />}>
+                <span className="font-black text-white-100 tracking-wide">TÉLÉCHARGER CV</span>
               </Button>
             </div>
           </a>
@@ -74,7 +77,7 @@ function Home(props: any) {
         </div>
       </div>
       <div className="footer flex justify-center items-center">
-        <Footer color="red" border="white" />
+        <Footer />
       </div>
     </>
   )

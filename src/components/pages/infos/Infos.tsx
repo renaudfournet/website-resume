@@ -1,7 +1,8 @@
-import { faArrowRight, faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
 import { useSpring, a } from 'react-spring'
+import { location } from '../../../assets/images'
 
 function Infos() {
   //REACT SPRING
@@ -26,21 +27,21 @@ function Infos() {
     <a.div
       onMouseOver={showMore}
       style={{ opacity: opacity.to(o => 1 - o), transform }}
-      className="flex bg-white w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 rounded-lg border bg-white-100 card-home"
+      className="flex bg-white-100 w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 rounded-lg"
     >
       <div className="relative overflow-auto no-scrollbar">
         <div className="p-10">
           <div className="mb-10 mt-8">
-            <p className="flex text-left font-bold text-1xl xs:text-4xl sm:text-4xl text-primary-100">
-              Front End Web Developer
+            <p className="flex text-left  text-black-100 text-1xl xs:text-2xl sm:text-2xl">
+              <img alt="location" src={location} /> &nbsp; Bayonne, FR
             </p>
-            <p className="flex text-left  text-primary-100 text-1xl xs:text-3xl sm:text-3xl">
-              <FontAwesomeIcon icon={faLocationDot} className="mt-1 xs:mt-2 md:mt-2" /> &nbsp;
-              Bayonne, FR
+            <hr className="line-horizontal-blue mt-6 mb-4" />
+            <p className="flex text-left font-black text-1xl xs:text-4xl sm:text-4xl text-primary-100">
+              DÉVELOPPEUR FRONT END
             </p>
           </div>
           <div className="flex items-center text-primary-100 absolute p-4 bottom-0 right-0 ">
-            <p className="text-xs font-bold">More about me</p>&nbsp;&nbsp;
+            <p className="text-xs font-bold">À propos de moi</p>&nbsp;&nbsp;
             <FontAwesomeIcon icon={faArrowRight} />
           </div>
         </div>
@@ -54,7 +55,7 @@ function Infos() {
         transform,
         rotateX: '180deg'
       }}
-      className="flex bg-white w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 rounded-lg border bg-white-100 card-home"
+      className="flex bg-white w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 rounded-lg bg-white-100"
     >
       <div className="flex flex-col p-6 static ">
         <div>

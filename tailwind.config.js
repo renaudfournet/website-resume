@@ -23,20 +23,20 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          100: '#6959BB',
+          100: '#365DED',
           200: '#373199'
         },
         secondary: {
-          100: '#f97316'
-        },
-        whitesmoke: {
-          100: '#F5F5F5'
-        },
-        black: {
-          100: '#000000'
+          100: '#100A31'
         },
         white: {
-          100: '#fcfcfc'
+          100: '#FFFFFF'
+        },
+        whitesmoke: {
+          100: '#F2F2F2'
+        },
+        black: {
+          100: '#100A31'
         },
         red: {
           100: '#272727'

@@ -3,8 +3,7 @@ import {
   faBootstrap,
   faGithubSquare,
   faGitSquare,
-  faHtml5,
-  faJs
+  faHtml5
 } from '@fortawesome/free-brands-svg-icons'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -12,7 +11,7 @@ import { Doughnut } from 'react-chartjs-2'
 import 'chart.js/auto'
 import { useState } from 'react'
 import { useSpring, a } from 'react-spring'
-import { tailwindLogo, vscodeLogo } from '../../../assets/images'
+import { jsLogo, tailwindLogo, vscodeLogo } from '../../../assets/images'
 
 function Description() {
   //CHART.JS
@@ -67,18 +66,21 @@ function Description() {
     <a.div
       onMouseOver={showMore}
       style={{ opacity: opacity.to(o => 1 - o), transform }}
-      className="relative p-10 w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 bg-white rounded-lg  bg-primary-200"
+      className="relative p-10 w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 bg-white rounded-lg bg-secondary-100"
     >
-      <div className="flex justify-center text-white-100 text-6xl xs:text-9xl sm:text-9xl  md:text-9xl">
-        <FontAwesomeIcon icon={faJs} />
-      </div>
-      <div>
-        <p className="flex justify-center font-bold text-1xl xs:text-3xl md:text-3xl text-white-100 mt-10 sm:mt-20 px-4">
-          JAVASCRIPT
-        </p>
+      <div className="mb-10">
+        <div className="flex h-32 justify-start text-white-100 text-6xl xs:text-9xl sm:text-9xl  md:text-9xl">
+          <img className="w-20" alt="javascript" src={jsLogo} />
+        </div>
+        <div className="line-horizontal-white mt-6 mb-4"></div>
+        <div>
+          <p className="flex justify-start font-black text-1xl xs:text-4xl md:text-4xl text-white-100">
+            COMPÉTENCES
+          </p>
+        </div>
       </div>
       <div className="flex items-center text-white-100 absolute p-4 bottom-0 right-0 ">
-        <p className="text-xs font-bold">More about me</p>&nbsp;&nbsp;
+        <p className="text-xs font-bold">Ce que je fais</p>&nbsp;&nbsp;
         <FontAwesomeIcon icon={faArrowRight} />
       </div>
     </a.div>
