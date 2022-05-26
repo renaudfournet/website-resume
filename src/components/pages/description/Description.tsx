@@ -7,72 +7,69 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Doughnut } from 'react-chartjs-2'
-import 'chart.js/auto'
 import { useState } from 'react'
-import { useSpring, a } from 'react-spring'
 import { jsLogo, tailwindLogo, vscodeLogo } from '../../../assets/images'
+import { Pie } from 'react-chartjs-2'
+import 'chart.js/auto'
 
 function Description() {
-  //CHART.JS
+  //CHART JS
   const data = {
-    labels: ['REACT', 'ANGULAR'],
+    labels: ['REACT', 'TAILWIND UI', 'ANGULAR'],
+
     datasets: [
       {
-        label: 'Frameworks',
-        data: [50, 50],
-        backgroundColor: ['orange', 'green']
+        label: 'My First Dataset',
+        data: [33, 33, 33],
+        backgroundColor: ['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)'],
+        borderWidth: 0
       }
     ]
   }
+
+  //NOT DISPLAY LABEL MOBILE
+  function labelDisplay(): any {
+    if (window.innerWidth < 2000 && window.innerWidth > 400) {
+      return true
+    } else {
+      return false
+    }
+  }
+
+  // console.log('*********', width)
+
   const options: any = {
     plugins: {
-      title: {
-        display: true,
-        text: 'FRAMEWORKS',
-        font: { size: 20 },
-        color: 'white'
-      },
+      title: { display: true, text: 'white', color: 'white' },
+      // maintainAspectRatio: false,
       legend: {
+        display: labelDisplay(),
+        position: 'right',
         labels: {
-          color: 'white',
-          font: { size: 10 }
-        },
-        position: 'top'
+          color: 'rgb(255, 99, 132)'
+        }
       }
     }
   }
 
-  //REACT SPRING
-  const [flipped, set] = useState(false)
-  const anim = () => {
-    set(!flipped)
-  }
-
-  const { transform, opacity } = useSpring({
-    opacity: flipped ? 1 : 0,
-    transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
-    config: { mass: 12, tension: 500, friction: 130 }
-  })
+  console.log('*********', window.innerWidth)
 
   //SHOW BUTTON
   const [show, setShow] = useState(false)
   const showMore = () => {
-    setShow(!show)
-    anim()
+    setShow(show)
   }
 
-  return !show ? (
-    <a.div
+  return show ? (
+    <div
       onMouseOver={showMore}
-      style={{ opacity: opacity.to(o => 1 - o), transform }}
       className="relative p-10 w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 bg-white rounded-lg bg-secondary-100"
     >
       <div className="mb-10">
         <div className="flex h-32 justify-start text-white-100 text-6xl xs:text-9xl sm:text-9xl  md:text-9xl">
           <img className="w-20" alt="javascript" src={jsLogo} />
         </div>
-        <div className="line-horizontal-white mt-6 mb-4"></div>
+        <div className="line-horizontal-white mt-4 mb-4"></div>
         <div>
           <p className="flex justify-start font-black text-1xl xs:text-4xl md:text-4xl text-white-100">
             COMPÉTENCES
@@ -83,43 +80,35 @@ function Description() {
         <p className="text-xs font-bold">Ce que je fais</p>&nbsp;&nbsp;
         <FontAwesomeIcon icon={faArrowRight} />
       </div>
-    </a.div>
+    </div>
   ) : (
-    <a.div
+    <div
       onMouseLeave={showMore}
-      style={{
-        opacity,
-        transform,
-        rotateX: '180deg'
-      }}
-      className="relative w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 flex flex-col bg-white rounded-lg bg-primary-200"
+      className="relative w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 flex flex-col bg-white rounded-lg bg-secondary-100"
     >
-      <div style={{ width: '200px', height: '200px', display: 'block', margin: 'auto' }}>
-        <Doughnut data={data} options={options} />
+      <div className="flex flex-col justify-center xxs:p-10 xs:p-10 md:p-10">
+        <Pie data={data} options={options} />
+        <p className="flex justify-center font-bold text-1xl xs:text-2xl md:text-2xl text-white-100 mb-10">
+          <FontAwesomeIcon className="px-2" icon={faGitSquare} />
+          <FontAwesomeIcon className="px-2" icon={faGithubSquare} />
+          <FontAwesomeIcon className="px-2" icon={faBootstrap} />
+          <FontAwesomeIcon className="px-2" icon={faHtml5} />
+          <FontAwesomeIcon className="px-2" icon={faApple} />
+          <img
+            className="mx-2"
+            src={tailwindLogo}
+            alt="tailwind"
+            style={{ width: '20px', height: '20px' }}
+          />
+          <img
+            className="mx-2"
+            src={vscodeLogo}
+            alt="vscode"
+            style={{ width: '15px', height: '15px' }}
+          />
+        </p>
       </div>
-      {/* <p className="flex justify-center font-bold text-1xl xs:text-2xl md:text-2xl text-white-100">
-        Techno :
-      </p> */}
-      <p className="flex justify-center font-bold text-1xl xs:text-2xl md:text-2xl text-white-100 mb-10">
-        <FontAwesomeIcon className="px-2" icon={faGitSquare} />
-        <FontAwesomeIcon className="px-2" icon={faGithubSquare} />
-        <FontAwesomeIcon className="px-2" icon={faBootstrap} />
-        <FontAwesomeIcon className="px-2" icon={faHtml5} />
-        <FontAwesomeIcon className="px-2" icon={faApple} />
-        <img
-          className="mx-2"
-          src={tailwindLogo}
-          alt="tailwind"
-          style={{ width: '20px', height: '20px' }}
-        />
-        <img
-          className="mx-2"
-          src={vscodeLogo}
-          alt="vscode"
-          style={{ width: '15px', height: '15px' }}
-        />
-      </p>
-    </a.div>
+    </div>
   )
 }
 

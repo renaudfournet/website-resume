@@ -1,19 +1,10 @@
-import { faJs } from '@fortawesome/free-brands-svg-icons'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Doughnut } from 'react-chartjs-2'
-import 'chart.js/auto'
 import { useState } from 'react'
 import { useSpring, a } from 'react-spring'
 import { projectIcon } from '../../../assets/images'
 
 function Description() {
-  //CHART.JS
-  const data = {
-    labels: ['React', 'Angular'],
-    datasets: [{ label: 'The Level', data: [50, 50] }]
-  }
-
   //REACT SPRING
   const [flipped, set] = useState(false)
   const anim = () => {
@@ -44,7 +35,7 @@ function Description() {
           <img alt="projets" src={projectIcon} />
         </div>
         <div className="mb-10">
-          <div className="line-horizontal-white mt-6 mb-4"></div>
+          <div className="line-horizontal-white mt-4 mb-4"></div>
           <p className="flex text-left font-black text-1xl xs:text-4xl sm:text-4xl text-white-100">
             PROJETS
           </p>

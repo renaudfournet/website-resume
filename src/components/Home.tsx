@@ -1,4 +1,3 @@
-import { DocumentTextOutline } from 'heroicons-react'
 import Button from './Button'
 import Description from './pages/description/Description'
 import Etudes from './pages/etudes/Etudes'
@@ -26,22 +25,26 @@ function Home(props: any) {
   return (
     <>
       <div className="main">
-        <div className="w-full xs:h-auto sm:h-30 md:h-30 lg:h-30 flex flex-wrap justify-between px-7 mt-4">
-          <div>
+        <div className="w-full xs:h-auto sm:h-30 md:h-30 lg:h-30 flex flex-wrap xxs:flex-col xs:flex-row  xs:justify-between px-7 mt-4">
+          <div className="flex justify-center xs:justify-start">
             <Profil />
           </div>
-          <a href="mailto:fournet.renaud@gmail.com">
-            <Button background="#365DED" color="black">
-              <span className="font-black text-white-100 tracking-wide">ME CONTACTER</span>
-            </Button>
-          </a>
+          <div className="flex justify-center xs:justify-end">
+            <a href="mailto:fournet.renaud@gmail.com">
+              <Button background="#365DED" color="black">
+                <span className="font-black text-white-100 tracking-wide">ME CONTACTER</span>
+              </Button>
+            </a>
+          </div>
         </div>
         <div className="flex justify-center mt-20">
-          <p className="text-whitesmoke-100 text-7xl font-black stroke tracking-widest">BONJOUR</p>
-          <div className="vertical mt-40"></div>
+          <p className="text-whitesmoke-100 text-4xl xs:text-5xl md:text-7xl font-black stroke tracking-widest">
+            BONJOUR
+          </p>
+          <div className="vertical mt-20 md:mt-40"></div>
         </div>
 
-        <div className="grid justify-items-center md:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 xs:gap-8 gap-6 xs:-mt-0 lg:px-40 xs:px-0 pt-72">
+        <div className="grid justify-items-center md:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 xs:gap-8 gap-6 xs:-mt-0 lg:px-40 xs:px-0 pt-40 md:pt-72">
           <div>
             <Infos />
           </div>
@@ -55,10 +58,10 @@ function Home(props: any) {
             <Portfolio />
           </div>
           <div className="mb-10">
-            <Interests />
+            <Etudes />
           </div>
           <div className="mb-10">
-            <Etudes />
+            <Interests />
           </div>
         </div>
         <div className="flex justify-center">
@@ -68,8 +71,8 @@ function Home(props: any) {
             download="Renaud_Fournet_resume"
           >
             <div className="mt-20 mb-20">
-              <Button background="#365DED" color="black" icon={<DocumentTextOutline />}>
-                <span className="font-black text-white-100 tracking-wide">TÉLÉCHARGER CV</span>
+              <Button background="#365DED" color="white">
+                <span className="font-black tracking-wide">TÉLÉCHARGER CV</span>
               </Button>
             </div>
           </a>

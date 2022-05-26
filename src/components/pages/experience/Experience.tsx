@@ -31,7 +31,7 @@ function Experience() {
       <div className="mb-10 flex flex-col">
         <div className="h-32"></div>
 
-        <div className="line-horizontal-blue mt-6 mb-4"></div>
+        <div className="line-horizontal-blue mt-4 mb-4"></div>
         <p className="flex text-left font-black text-1xl xs:text-4xl sm:text-4xl text-primary-100">
           EXPÉRIENCES
         </p>
@@ -59,26 +59,28 @@ function Experience() {
             <div>
               <ul>
                 <li className="mt-4">
-                  <div className="text-primary-100 font-bold">DÉVELOPPEUR WEB (alternance)</div>
-                  <div className="text-primary-100 italic">septembre 2021 / mai 2022</div>
-                  <div className="text-primary-100">Graal Quest - Hossegor</div>
+                  <div className="text-primary-100 font-extrabold	">
+                    DÉVELOPPEUR WEB (alternance)
+                  </div>
+                  <div className="text-black-100">septembre 2021 / mai 2022</div>
+                  <div className="text-black-100 italic">Graal Quest - Hossegor</div>
                 </li>
                 <li className="mt-2">
-                  <div className="text-primary-100 font-bold">DÉVELOPPEUR WEB (stage)</div>
-                  <div className="text-primary-100 italic">février / juin 2021</div>
-                  <div className="text-primary-100">Budget Our Planet - Hendaye (remote)</div>
+                  <div className="text-primary-100 font-extrabold	">DÉVELOPPEUR WEB (stage)</div>
+                  <div className="text-black-100">février / juin 2021</div>
+                  <div className="text-black-100 italic">Budget Our Planet - Hendaye (remote)</div>
                 </li>
                 <li className="mt-2">
-                  <div className="text-primary-100 font-bold">
+                  <div className="text-primary-100 font-extrabold	">
                     PROJETS DE FORMATION DÉVELOPPEUR WEB & WEB MOBILE
                   </div>
-                  <div className="text-primary-100 italic mt-2">TREE6CLOPE</div>
-                  <div className="text-primary-100">
+                  <div className="text-black-100 italic mt-2">TREE6CLOPE</div>
+                  <div className="text-black-100">
                     Réalisation d’un outil destiné aux adhérents et aux administrateurs de
                     l’association Tree6Clope avec pour but de simplifier la gestion des données.
                   </div>
-                  <div className="text-primary-100 italic mt-2">HACKATON “BACK TO THE FUTURE”</div>
-                  <div className="text-primary-100">
+                  <div className="text-black-100 italic mt-2">HACKATON “BACK TO THE FUTURE”</div>
+                  <div className="text-black-100">
                     Création d’une application web avec pour contexte le début du 20ème siècle.
                     L’application permet la réservation de trajets en calèche à travers la France à
                     une date choisie, utilisant l’API BlaBlaCar

@@ -1,4 +1,4 @@
-import { faArrowRight, faGraduationCap } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
 import { useSpring, a } from 'react-spring'
@@ -26,18 +26,17 @@ function Etudes() {
     <a.div
       onMouseOver={showMore}
       style={{ opacity: opacity.to(o => 1 - o), transform }}
-      className="w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 rounded-lg bg-white-100"
+      className="relative bg-white p-10 w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 rounded-lg bg-white-100"
     >
-      <div className="text-primary-100 flex justify-center">
-        <FontAwesomeIcon className="text-6xl mt-10" icon={faGraduationCap} />
+      <div className="mb-10 flex flex-col">
+        <div className="h-32"></div>
+
+        <div className="line-horizontal-blue mt-4 mb-4"></div>
+        <p className="flex text-left font-black text-1xl xs:text-4xl sm:text-4xl text-primary-100">
+          FORMATION
+        </p>
       </div>
-      <div className="overflow-auto no-scrollbar mt-4">
-        <div className="p-10 flex justify-center">
-          <p className="flex font-black text-1xl xs:text-4xl sm:text-4xl text-primary-100">
-            FORMATIONS
-          </p>
-        </div>
-      </div>
+
       <div className="flex items-center text-primary-100 absolute p-4 bottom-0 right-0 ">
         <p className="text-xs font-bold">En savoir plus</p>&nbsp;&nbsp;
         <FontAwesomeIcon icon={faArrowRight} />
@@ -56,20 +55,34 @@ function Etudes() {
       <div className="relative overflow-auto no-scrollbar">
         <div className="flex flex-col p-6 static ">
           <div>
-            <p className="text-left  text-primary-100 font-bold text-2xl">Études</p>
+            <p className="text-left  text-primary-100 font-bold text-2xl">Expériences</p>
             <div>
               <ul>
                 <li className="mt-4">
-                  <div className="text-primary-100 font-bold">FORMATION DÉVELOPPEUR WEB</div>
-                  <div className="text-primary-100 italic">Septembre 2020 à février 2021</div>
-                  <div className="text-primary-100">Wild Code School - Anglet</div>
+                  <div className="text-primary-100 font-bold">DÉVELOPPEUR WEB (alternance)</div>
+                  <div className="text-primary-100 italic">septembre 2021 / mai 2022</div>
+                  <div className="text-primary-100">Graal Quest - Hossegor</div>
+                </li>
+                <li className="mt-2">
+                  <div className="text-primary-100 font-bold">DÉVELOPPEUR WEB (stage)</div>
+                  <div className="text-primary-100 italic">février / juin 2021</div>
+                  <div className="text-primary-100">Budget Our Planet - Hendaye (remote)</div>
                 </li>
                 <li className="mt-2">
                   <div className="text-primary-100 font-bold">
-                    FORMATION DÉVELOPPEUR WEB AVANCÉE
+                    PROJETS DE FORMATION DÉVELOPPEUR WEB & WEB MOBILE
                   </div>
-                  <div className="text-primary-100 italic">Septembre 2021 à septembre 2022</div>
-                  <div className="text-primary-100">Wild Code School - Remote</div>
+                  <div className="text-primary-100 italic mt-2">TREE6CLOPE</div>
+                  <div className="text-primary-100">
+                    Réalisation d’un outil destiné aux adhérents et aux administrateurs de
+                    l’association Tree6Clope avec pour but de simplifier la gestion des données.
+                  </div>
+                  <div className="text-primary-100 italic mt-2">HACKATON “BACK TO THE FUTURE”</div>
+                  <div className="text-primary-100">
+                    Création d’une application web avec pour contexte le début du 20ème siècle.
+                    L’application permet la réservation de trajets en calèche à travers la France à
+                    une date choisie, utilisant l’API BlaBlaCar
+                  </div>
                 </li>
               </ul>
             </div>
