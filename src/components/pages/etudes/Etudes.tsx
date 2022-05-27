@@ -29,7 +29,7 @@ function Etudes() {
       className="relative bg-white p-10 w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 rounded-lg bg-white-100"
     >
       <div className="mb-10 flex flex-col">
-        <div className="h-32"></div>
+        <div className="h-10 xs:h-32 md:h-32"></div>
 
         <div className="line-horizontal-blue mt-4 mb-4"></div>
         <p className="flex text-left font-black text-1xl xs:text-4xl sm:text-4xl text-primary-100">

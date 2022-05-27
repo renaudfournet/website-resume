@@ -1,33 +1,19 @@
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faArrowRight, faChess, faCloudBolt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
-import { useSpring, a } from 'react-spring'
 import { projectIcon } from '../../../assets/images'
 
 function Description() {
-  //REACT SPRING
-  const [flipped, set] = useState(false)
-  const anim = () => {
-    set(!flipped)
-  }
-
-  const { transform, opacity } = useSpring({
-    opacity: flipped ? 1 : 0,
-    transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
-    config: { mass: 12, tension: 500, friction: 130 }
-  })
-
   //SHOW BUTTON
   const [show, setShow] = useState(false)
   const showMore = () => {
     setShow(!show)
-    anim()
   }
 
   return !show ? (
-    <a.div
+    <div
       onMouseOver={showMore}
-      style={{ opacity: opacity.to(o => 1 - o), transform }}
       className="flex bg-white w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 rounded-lg bg-primary-100"
     >
       <div className="relative p-10 overflow-auto no-scrollbar flex flex-col">
@@ -46,19 +32,45 @@ function Description() {
         <p className="text-xs font-bold">En savoir plus</p>&nbsp;&nbsp;
         <FontAwesomeIcon icon={faArrowRight} />
       </div>
-    </a.div>
+    </div>
   ) : (
-    <a.div
+    <div
       onMouseLeave={showMore}
-      style={{
-        opacity,
-        transform,
-        rotateX: '180deg'
-      }}
       className="relative w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 flex bg-white rounded-lg bg-primary-100 text-white-100"
     >
-      Verso
-    </a.div>
+      <div className="relative overflow-auto no-scrollbar">
+        <div className="flex flex-col p-6">
+          <div className="text-left">
+            <ul>
+              <li className="mt-4">
+                <div className="text-white-100 font-extrabold">
+                  BOT TWITTER&nbsp;&nbsp; <FontAwesomeIcon icon={faTwitter} />
+                </div>
+                <div className="text-black-100">
+                  <a href="https://twitter.com/anybotcandoit">@VulesJerne</a>
+                </div>
+              </li>
+              <li className="mt-4">
+                <div className="text-white-100 font-extrabold">
+                  CHESS API&nbsp;&nbsp;
+                  <FontAwesomeIcon icon={faChess} />
+                </div>
+                <div className="text-black-100">
+                  {' '}
+                  <a href="https://alphajasonbot.netlify.app/">@AlphaJason</a>
+                </div>
+              </li>
+              <li className="mt-4">
+                <div className="text-white-100 font-extrabold">
+                  WEATHER APP&nbsp;&nbsp; <FontAwesomeIcon icon={faCloudBolt} />
+                </div>
+                <div className="text-black-100">Disconnected</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 

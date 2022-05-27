@@ -1,5 +1,3 @@
-import { ArrowRightOutline } from 'heroicons-react'
-
 function Hobbies() {
   return (
     <>
@@ -10,7 +8,6 @@ function Hobbies() {
 
         <div className=" flex justify-center items-center text-primary-100 absolute p-4 bottom-0 right-0 ">
           <p className="text-xs">See all hobbies</p>&nbsp;&nbsp;
-          <ArrowRightOutline />
         </div>
       </div>
     </>

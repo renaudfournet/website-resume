@@ -31,7 +31,7 @@ function Interests() {
       className="relative p-10 w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 bg-white rounded-lg bg-secondary-100"
     >
       <div className="mb-10">
-        <div className="flex h-32 justify-start text-white-100 text-6xl xs:text-9xl sm:text-9xl  md:text-9xl">
+        <div className="flex xxs:h-16 xs:h-32 md:h-32 justify-start text-white-100 text-6xl xs:text-9xl sm:text-9xl  md:text-9xl">
           <img className="w-10 md:w-20 pr-2" alt="javascript" src={jsLogo} />
           <img className="w-10 md:w-20 pr-2" alt="javascript" src={jsLogo} />
           <img className="w-10 md:w-20 pr-2" alt="javascript" src={jsLogo} />
@@ -40,7 +40,7 @@ function Interests() {
         <div className="line-horizontal-white mt-4 mb-4"></div>
         <div>
           <p className="flex justify-start font-black text-1xl xs:text-4xl md:text-4xl text-white-100">
-            COMPÉTENCES
+            HOBBIES
           </p>
         </div>
       </div>
