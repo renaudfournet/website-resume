@@ -1,9 +1,30 @@
-import * as React from 'react'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
 import { jsLogo } from '../../../assets/images'
-import axios from 'axios'
+import { useEffect } from 'react'
+import GetPlaylist from './playlists/GetPlaylist'
+
+const clientID = process.env.REACT_APP_CLIENT_ID
+const SPOTIFY_AUTHORIZE_ENDPOINT = 'https://accounts.spotify.com/authorize'
+const REDIRECT_AFTER_LOGIN = 'http://localhost:3000/callback'
+const SPACE_DELIMITER = '%20'
+const SCOPES = ['user-read-currently-playing', 'user-read-playback-state', 'playlist-read-private']
+const SCOPES_URL_PARAMS = SCOPES.join(SPACE_DELIMITER)
+const newAccessToken = process.env.REACT_APP_SPOTIFY_TOKEN
+
+const getReturnedParamsFromSpotifyAuth = hash => {
+  const stringAfterHashtag = hash.substring(1)
+  const paramsInUrl = stringAfterHashtag.split('&')
+  const paramsSplitUp = paramsInUrl.reduce((accumulater, currentValue) => {
+    console.log(currentValue)
+    const [key, value] = currentValue.split('=')
+    accumulater[key] = value
+    return accumulater
+  }, {})
+
+  return paramsSplitUp
+}
 
 function Interests(props: any) {
   //SHOW BUTTON
@@ -13,16 +34,26 @@ function Interests(props: any) {
   }
 
   //SPOTIFY
-  const newAccessToken = process.env.REACT_APP_SPOTIFY_TOKEN
-  console.log('*******', newAccessToken)
-  axios.get('https://api.spotify.com/v1/me/playlists', {
-    params: { limit: 50, offset: 0 },
-    headers: {
-      Accept: 'application/json',
-      Authorization: 'Bearer ',
-      'Content-Type': 'application/json'
+
+  /*http://localhost:3000/callback#access_token=BQDwOFdFJ43pDv_GUMjHSonP1PDe8Sc_ieyXQN4dyeWWP6LyFC6oTI6rMC_w6JKt_WfZvv8Pq-z_om4rpSK5ryhar0x9HSynDhKKvBNVAQ_yaBobRmVZ6uZiCQaDKW2lM3b-tq03l713UEtz0YK_ng&token_type=Bearer&expires_in=3600*/
+
+  useEffect(() => {
+    if (window.location.hash) {
+      const { access_token, expires_in, token_type } = getReturnedParamsFromSpotifyAuth(
+        window.location.hash
+      )
+
+      localStorage.clear()
+
+      localStorage.setItem('accessToken', access_token)
+      localStorage.setItem('tokenType', token_type)
+      localStorage.setItem('expiresIn', expires_in)
     }
   })
+
+  const handleLogin = () => {
+    window.location.href = `${SPOTIFY_AUTHORIZE_ENDPOINT}?client_id=${clientID}&redirect_uri=${REDIRECT_AFTER_LOGIN}&scope=${SCOPES_URL_PARAMS}&response_type=token&show_dialog=true`
+  }
 
   return show ? (
     <div
@@ -51,9 +82,12 @@ function Interests(props: any) {
   ) : (
     <div
       onMouseLeave={showMore}
-      className="relative p-6 w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 flex flex-col bg-white rounded-lg bg-secondary-100"
+      className="relative p-6 w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 flex flex-col bg-white rounded-lg bg-primary-100"
     >
-      <div className="text-left text-white-100"></div>
+      <div className="text-left text-white-100">
+        <button onClick={handleLogin}>Login to SPOTIFY</button>
+        <GetPlaylist />
+      </div>
     </div>
   )
 }
