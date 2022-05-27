@@ -14,9 +14,9 @@ function Description() {
   return !show ? (
     <div
       onMouseOver={showMore}
-      className="flex bg-white w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 rounded-lg bg-primary-100"
+      className="relative flex bg-white w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 rounded-lg bg-primary-100"
     >
-      <div className="relative p-10 overflow-auto no-scrollbar flex flex-col">
+      <div className=" p-10 overflow-auto no-scrollbar flex flex-col">
         <div className="h-32 flex justify-start">
           <img alt="projets" src={projectIcon} />
         </div>
@@ -28,7 +28,7 @@ function Description() {
         </div>
       </div>
 
-      <div className="flex items-center text-primary-100 absolute p-4 bottom-0 right-0 ">
+      <div className="flex items-center text-white-100 absolute p-4 bottom-0 right-0 ">
         <p className="text-xs font-bold">En savoir plus</p>&nbsp;&nbsp;
         <FontAwesomeIcon icon={faArrowRight} />
       </div>

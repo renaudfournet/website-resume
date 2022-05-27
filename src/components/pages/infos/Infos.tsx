@@ -40,11 +40,11 @@ function Infos() {
     >
       <div className="flex flex-col p-6 static ">
         <div>
-          <p className="text-left  text-primary-100 font-bold text-2xl">Qui suis-je ?</p>
+          <p className="text-left  text-primary-100 font-black text-3xl">QUI SUIS-JE ?</p>
 
-          <p className="text-left  text-primary-100 text-sm">
-            Passionné de nouvelles technologies et toujorus partant pour de nouveaux challenges,
-            j'aimerais enrichier et développer mes compétences en intégrant une entreprise et ainsi
+          <p className="text-left text-1xl text-primary-100">
+            Passionné de nouvelles technologies et toujours partant pour de nouveaux challenges,
+            j'aimerais enrichir et développer mes compétences en intégrant une entreprise et ainsi
             contribuer à son développement et prendre part à des projets inspirants
           </p>
         </div>

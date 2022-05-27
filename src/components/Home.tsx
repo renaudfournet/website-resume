@@ -65,17 +65,20 @@ function Home(props: any) {
           </div>
         </div>
         <div className="flex justify-center">
-          <a
-            onClick={notify}
-            href={require('../assets/files/Renaud_Fournet_CV_2021.pdf')}
-            download="Renaud_Fournet_resume"
-          >
-            <div className="mt-20 mb-20">
-              <Button background="#365DED" color="white">
-                <span className="font-black tracking-wide">TÉLÉCHARGER CV</span>
-              </Button>
-            </div>
-          </a>
+          <div className="mt-20 mb-20">
+            <a
+              onClick={notify}
+              href={require('../assets/files/Renaud_Fournet_CV_05_22.pdf')}
+              download="Renaud_Fournet_resume"
+            >
+              <div>
+                <Button background="#365DED" color="white">
+                  <span className="font-black tracking-wide">TÉLÉCHARGER CV</span>
+                </Button>
+              </div>
+            </a>
+          </div>
+
           <ToastContainer position="bottom-right" />
         </div>
       </div>

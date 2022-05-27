@@ -1,33 +1,32 @@
+import * as React from 'react'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
-import { useSpring, a } from 'react-spring'
 import { jsLogo } from '../../../assets/images'
+import axios from 'axios'
 
-function Interests() {
-  //REACT SPRING
-  const [flipped, set] = useState(false)
-  const anim = () => {
-    set(!flipped)
-  }
-
-  const { transform, opacity } = useSpring({
-    opacity: flipped ? 1 : 0,
-    transform: `perspective(600px) rotateX(${flipped ? 180 : 0}deg)`,
-    config: { mass: 12, tension: 500, friction: 130 }
-  })
-
+function Interests(props: any) {
   //SHOW BUTTON
   const [show, setShow] = useState(false)
   const showMore = () => {
-    setShow(!show)
-    anim()
+    setShow(show)
   }
 
-  return !show ? (
-    <a.div
+  //SPOTIFY
+  const newAccessToken = process.env.REACT_APP_SPOTIFY_TOKEN
+  console.log('*******', newAccessToken)
+  axios.get('https://api.spotify.com/v1/me/playlists', {
+    params: { limit: 50, offset: 0 },
+    headers: {
+      Accept: 'application/json',
+      Authorization: 'Bearer ',
+      'Content-Type': 'application/json'
+    }
+  })
+
+  return show ? (
+    <div
       onMouseOver={showMore}
-      style={{ opacity: opacity.to(o => 1 - o), transform }}
       className="relative p-10 w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 bg-white rounded-lg bg-secondary-100"
     >
       <div className="mb-10">
@@ -45,22 +44,17 @@ function Interests() {
         </div>
       </div>
       <div className="flex items-center text-white-100 absolute p-4 bottom-0 right-0 ">
-        <p className="text-xs font-bold">Ce que je fais</p>&nbsp;&nbsp;
+        <p className="text-xs font-bold">Découvrir ce que j'écoute en ce moment</p>&nbsp;&nbsp;
         <FontAwesomeIcon icon={faArrowRight} />
       </div>
-    </a.div>
+    </div>
   ) : (
-    <a.div
+    <div
       onMouseLeave={showMore}
-      style={{
-        opacity,
-        transform,
-        rotateX: '180deg'
-      }}
-      className="relative w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 flex flex-col bg-white rounded-lg bg-primary-200"
+      className="relative p-6 w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 flex flex-col bg-white rounded-lg bg-secondary-100"
     >
-      <div>VERSO</div>
-    </a.div>
+      <div className="text-left text-white-100"></div>
+    </div>
   )
 }
 
