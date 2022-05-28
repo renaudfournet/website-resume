@@ -16,14 +16,14 @@ const SPOTIFY_AUTHORIZE_ENDPOINT = 'https://accounts.spotify.com/authorize'
 const REDIRECT_AFTER_LOGIN = 'http://localhost:3000/callback'
 const SPACE_DELIMITER = '%20'
 const SCOPES = [
-  'user-read-playback-state',
-  'streaming',
-  'user-read-email',
+  'user-modify-playback-state',
   'user-read-private',
-  'user-modify-playback-state'
+  'user-read-email',
+  // 'user-read-private',
+  'user-read-recently-played'
 ]
 const SCOPES_URL_PARAMS = SCOPES.join(SPACE_DELIMITER)
-// const newAccessToken = process.env.REACT_APP_SPOTIFY_TOKEN
+const newAccessToken = process.env.REACT_APP_SPOTIFY_TOKEN
 
 const getReturnedParamsFromSpotifyAuth = hash => {
   const stringAfterHashtag = hash.substring(1)

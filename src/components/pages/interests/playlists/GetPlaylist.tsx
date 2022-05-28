@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import SpotifyPlayer from 'react-spotify-web-playback'
+import Button from '../../../Button'
 
-const PLAYLISTS_ENDPOINT = 'https://api.spotify.com/v1/album/6NMzokKOYpPO9VXDjmc5y6'
+const PLAYLISTS_ENDPOINT = 'https://api.spotify.com/v1/tracks/11dFghVXANMlKmJXsNCbNl'
 
 const SpotifyGetPlaylists = (props: any) => {
   const [token, setToken] = useState('')
@@ -35,21 +36,21 @@ const SpotifyGetPlaylists = (props: any) => {
 
   return (
     <>
-      {/* <div onClick={handleGetPlaylists}>
+      <div onClick={handleGetPlaylists}>
         <Button background="green" color="white">
           <span className="font-black tracking-wide">SEE PLAYLISTS</span>
         </Button>
       </div>
 
-      {data?.items ? data.items.map(item => <p>{item.name}</p>) : null} */}
-      <div onClick={handleGetPlaylists}>
-        {data?.items ? data.items.map(item => <p>{item.name}</p>) : null}
-      </div>
-      <SpotifyPlayer
+      {data.name}
+      {/* <div onClick={handleGetPlaylists}>
+        {data?.items ? data.name.map(item => <p>{item.name}</p>) : null}
+      </div> */}
+      {/* <SpotifyPlayer
         autoPlay={true}
         token={token}
         uris={['spotify:album:6NMzokKOYpPO9VXDjmc5y6']}
-      />
+      /> */}
     </>
   )
 }
