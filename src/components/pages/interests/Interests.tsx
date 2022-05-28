@@ -7,6 +7,9 @@ import { useEffect } from 'react'
 // import Button from '../../Button'
 // import SpotifyGetPlaylists from './playlists/GetPlaylist'
 import SpotifyPlayer from 'react-spotify-web-playback'
+import axios from 'axios'
+
+const PLAYLISTS_ENDPOINT = 'https://api.spotify.com/v1/me/playlists'
 
 const clientID = process.env.REACT_APP_CLIENT_ID
 const SPOTIFY_AUTHORIZE_ENDPOINT = 'https://accounts.spotify.com/authorize'
@@ -71,21 +74,21 @@ function Interests(props: any) {
     }
   }, [])
 
-  // const handleGetPlaylists = () => {
-  //   axios
-  //     .get(PLAYLISTS_ENDPOINT, {
-  //       headers: {
-  //         Authorization: 'Bearer ' + token
-  //       }
-  //     })
-  //     .then(response => {
-  //       setData(response.data)
-  //       console.log('*******', setData)
-  //     })
-  //     .catch(error => {
-  //       console.log(error)
-  //     })
-  // }
+  const handleGetPlaylists = () => {
+    axios
+      .get(PLAYLISTS_ENDPOINT, {
+        headers: {
+          Authorization: 'Bearer ' + token
+        }
+      })
+      .then(response => {
+        setData(response.data)
+        console.log('*******', setData)
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  }
 
   return !show ? (
     <div
