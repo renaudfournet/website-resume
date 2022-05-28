@@ -33,8 +33,6 @@ function Interests(props: any) {
     setShow(show)
   }
 
-  //SPOTIFY
-
   /*http://localhost:3000/callback#access_token=BQDwOFdFJ43pDv_GUMjHSonP1PDe8Sc_ieyXQN4dyeWWP6LyFC6oTI6rMC_w6JKt_WfZvv8Pq-z_om4rpSK5ryhar0x9HSynDhKKvBNVAQ_yaBobRmVZ6uZiCQaDKW2lM3b-tq03l713UEtz0YK_ng&token_type=Bearer&expires_in=3600*/
 
   useEffect(() => {
@@ -82,11 +80,13 @@ function Interests(props: any) {
   ) : (
     <div
       onMouseLeave={showMore}
-      className="relative p-6 w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 flex flex-col bg-white rounded-lg bg-primary-100"
+      className="p-6 w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 flex flex-col bg-white rounded-lg bg-primary-100"
     >
-      <div className="text-left text-white-100">
-        <button onClick={handleLogin}>Login to SPOTIFY</button>
-        <GetPlaylist />
+      <div className="relative overflow-auto no-scrollbar">
+        <div className="text-left text-white-100">
+          <button onClick={handleLogin}>Login to SPOTIFY</button>
+          <GetPlaylist />
+        </div>
       </div>
     </div>
   )
