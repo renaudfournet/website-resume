@@ -1,38 +1,33 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
-import Button from '../../../Button'
 import PlayWidget from 'react-spotify-widgets'
 
-const PLAYLISTS_ENDPOINT = 'https://api.spotify.com/v1/tracks/11dFghVXANMlKmJXsNCbNl'
+// const PLAYLISTS_ENDPOINT = 'https://api.spotify.com/v1/tracks/11dFghVXANMlKmJXsNCbNl'
 
 const SpotifyGetPlaylists = (props: any) => {
-  const [token, setToken] = useState('')
-  const [data, setData] = useState(null)
+  //   const [token, setToken] = useState('')
+  //   const [data, setData] = useState(null)
 
-  useEffect(() => {
-    if (localStorage.getItem('accessToken')) {
-      setToken(localStorage.getItem('accessToken'))
-    }
-  }, [])
+  //   useEffect(() => {
+  //     if (localStorage.getItem('accessToken')) {
+  //       setToken(localStorage.getItem('accessToken'))
+  //     }
+  //   }, [])
 
-  const handleGetPlaylists = () => {
-    axios
-      .get(PLAYLISTS_ENDPOINT, {
-        headers: {
-          Authorization: 'Bearer ' + token,
-          'Content-Type': 'application/x-www-form-urlencoded'
-        }
-      })
-      .then(response => {
-        setData(response.data)
-        console.log('*******', setData)
-      })
-      .catch(error => {
-        console.log(error)
-      })
-  }
-
-  console.log('********* THATS MY DATA', data)
+  // const handleGetPlaylists = () => {
+  //   axios
+  //     .get(PLAYLISTS_ENDPOINT, {
+  //       headers: {
+  //         Authorization: 'Bearer ' + token,
+  //         'Content-Type': 'application/x-www-form-urlencoded'
+  //       }
+  //     })
+  //     .then(response => {
+  //       setData(response.data)
+  //       console.log('*******', setData)
+  //     })
+  //     .catch(error => {
+  //       console.log(error)
+  //     })
+  // }
 
   return (
     <>
