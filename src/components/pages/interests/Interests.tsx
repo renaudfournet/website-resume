@@ -3,9 +3,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
 import { jsLogo } from '../../../assets/images'
 import { useEffect } from 'react'
-import GetPlaylist from './playlists/GetPlaylist'
-import Button from '../../Button'
-import SpotifyGetPlaylists from './playlists/GetPlaylist'
+// import GetPlaylist from './playlists/GetPlaylist'
+// import Button from '../../Button'
+// import SpotifyGetPlaylists from './playlists/GetPlaylist'
+import SpotifyPlayer from 'react-spotify-web-playback'
 
 const clientID = process.env.REACT_APP_CLIENT_ID
 const SPOTIFY_AUTHORIZE_ENDPOINT = 'https://accounts.spotify.com/authorize'
@@ -61,6 +62,31 @@ function Interests(props: any) {
     window.location.href = `${SPOTIFY_AUTHORIZE_ENDPOINT}?client_id=${clientID}&redirect_uri=${REDIRECT_AFTER_LOGIN}&scope=${SCOPES_URL_PARAMS}&response_type=token&show_dialog=true`
   }
 
+  const [token, setToken] = useState('')
+  const [data, setData] = useState(null)
+
+  useEffect(() => {
+    if (localStorage.getItem('accessToken')) {
+      setToken(localStorage.getItem('accessToken'))
+    }
+  }, [])
+
+  // const handleGetPlaylists = () => {
+  //   axios
+  //     .get(PLAYLISTS_ENDPOINT, {
+  //       headers: {
+  //         Authorization: 'Bearer ' + token
+  //       }
+  //     })
+  //     .then(response => {
+  //       setData(response.data)
+  //       console.log('*******', setData)
+  //     })
+  //     .catch(error => {
+  //       console.log(error)
+  //     })
+  // }
+
   return !show ? (
     <div
       onMouseOver={showMore}
@@ -91,14 +117,15 @@ function Interests(props: any) {
       className="p-6 w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 flex flex-col bg-white rounded-lg bg-primary-100"
     >
       <div className="relative overflow-auto no-scrollbar">
-        <div onClick={handleLogin} className="text-left text-white-100">
-          {/* <Button background="green" color="white">
+        {/* <div onClick={handleLogin} className="text-left text-white-100"> */}
+        {/* <Button background="green" color="white">
             <span className="font-black tracking-wide">LOGIN SPOTIFY</span>
           </Button> */}
-          <SpotifyGetPlaylists />
-        </div>
+        {/* <SpotifyGetPlaylists /> */}
+        <SpotifyPlayer autoPlay token={token} uris={['spotify:album:6NMzokKOYpPO9VXDjmc5y6']} />
       </div>
     </div>
+    // </div>
   )
 }
 
