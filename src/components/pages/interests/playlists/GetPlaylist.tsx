@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import SpotifyPlayer from 'react-spotify-web-playback'
 import Button from '../../../Button'
 
 const PLAYLISTS_ENDPOINT = 'https://api.spotify.com/v1/tracks/11dFghVXANMlKmJXsNCbNl'
@@ -40,9 +39,9 @@ const SpotifyGetPlaylists = (props: any) => {
         <Button background="green" color="white">
           <span className="font-black tracking-wide">SEE PLAYLISTS</span>
         </Button>
+        {data.name}
       </div>
 
-      {data.name}
       {/* <div onClick={handleGetPlaylists}>
         {data?.items ? data.name.map(item => <p>{item.name}</p>) : null}
       </div> */}
