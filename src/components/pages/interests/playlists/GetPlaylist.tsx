@@ -18,7 +18,8 @@ const SpotifyGetPlaylists = (props: any) => {
     axios
       .get(PLAYLISTS_ENDPOINT, {
         headers: {
-          Authorization: 'Bearer ' + token
+          Authorization: 'Bearer ' + token,
+          'Content-Type': 'application/x-www-form-urlencoded'
         }
       })
       .then(response => {
