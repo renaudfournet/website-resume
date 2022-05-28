@@ -6,11 +6,10 @@ import { useEffect } from 'react'
 // import GetPlaylist from './playlists/GetPlaylist'
 // import Button from '../../Button'
 // import SpotifyGetPlaylists from './playlists/GetPlaylist'
-import SpotifyPlayer from 'react-spotify-web-playback'
-import axios from 'axios'
 import Button from '../../Button'
+import SpotifyGetPlaylists from './playlists/GetPlaylist'
 
-const PLAYLISTS_ENDPOINT = 'https://api.spotify.com/v1/me/playlists'
+// const PLAYLISTS_ENDPOINT = 'https://api.spotify.com/v1/me/playlists'
 
 const clientID = process.env.REACT_APP_CLIENT_ID
 const SPOTIFY_AUTHORIZE_ENDPOINT = 'https://accounts.spotify.com/authorize'
@@ -24,7 +23,7 @@ const SCOPES = [
   'user-modify-playback-state'
 ]
 const SCOPES_URL_PARAMS = SCOPES.join(SPACE_DELIMITER)
-const newAccessToken = process.env.REACT_APP_SPOTIFY_TOKEN
+// const newAccessToken = process.env.REACT_APP_SPOTIFY_TOKEN
 
 const getReturnedParamsFromSpotifyAuth = hash => {
   const stringAfterHashtag = hash.substring(1)
@@ -66,31 +65,6 @@ function Interests(props: any) {
     window.location.href = `${SPOTIFY_AUTHORIZE_ENDPOINT}?client_id=${clientID}&redirect_uri=${REDIRECT_AFTER_LOGIN}&scope=${SCOPES_URL_PARAMS}&response_type=token&show_dialog=true`
   }
 
-  const [token, setToken] = useState('')
-  const [data, setData] = useState(null)
-
-  useEffect(() => {
-    if (localStorage.getItem('accessToken')) {
-      setToken(localStorage.getItem('accessToken'))
-    }
-  }, [])
-
-  // const handleGetPlaylists = () => {
-  //   axios
-  //     .get(PLAYLISTS_ENDPOINT, {
-  //       headers: {
-  //         Authorization: 'Bearer ' + token
-  //       }
-  //     })
-  //     .then(response => {
-  //       setData(response.data)
-  //       console.log('*******', setData)
-  //     })
-  //     .catch(error => {
-  //       console.log(error)
-  //     })
-  // }
-
   return !show ? (
     <div
       onMouseOver={showMore}
@@ -126,8 +100,8 @@ function Interests(props: any) {
             <span className="font-black tracking-wide">LOGIN SPOTIFY</span>
           </Button>
           {/* <SpotifyGetPlaylists /> */}
-          <SpotifyPlayer autoPlay token={token} uris={['spotify:album:6NMzokKOYpPO9VXDjmc5y6']} />
         </div>
+        <SpotifyGetPlaylists />
       </div>
     </div>
   )
