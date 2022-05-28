@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Button from '../../../Button'
+import PlayWidget from 'react-spotify-widgets'
 
 const PLAYLISTS_ENDPOINT = 'https://api.spotify.com/v1/tracks/11dFghVXANMlKmJXsNCbNl'
 
@@ -31,16 +32,15 @@ const SpotifyGetPlaylists = (props: any) => {
       })
   }
 
-  console.log('********* THATS MY TOKEN', data)
+  console.log('********* THATS MY DATA', data)
 
   return (
     <>
-      <div onClick={handleGetPlaylists}>
+      {/* <div onClick={handleGetPlaylists}>
         <Button background="green" color="white">
           <span className="font-black tracking-wide">SEE PLAYLISTS</span>
         </Button>
-        {data.name}
-      </div>
+      </div> */}
 
       {/* <div onClick={handleGetPlaylists}>
         {data?.items ? data.name.map(item => <p>{item.name}</p>) : null}
@@ -50,6 +50,9 @@ const SpotifyGetPlaylists = (props: any) => {
         token={token}
         uris={['spotify:album:6NMzokKOYpPO9VXDjmc5y6']}
       /> */}
+      <div className="flex justify-center">
+        <PlayWidget width={300} height={380} uri={'spotify:album:6NMzokKOYpPO9VXDjmc5y6'} />
+      </div>
     </>
   )
 }

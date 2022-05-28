@@ -95,12 +95,12 @@ function Interests(props: any) {
       className="p-6 w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 flex flex-col bg-white rounded-lg bg-primary-100"
     >
       <div className="relative overflow-auto no-scrollbar">
-        <div onClick={handleLogin} className="text-left text-white-100">
+        {/* <div onClick={handleLogin} className="text-left text-white-100">
           <Button background="green" color="white">
             <span className="font-black tracking-wide">LOGIN SPOTIFY</span>
           </Button>
-          {/* <SpotifyGetPlaylists /> */}
-        </div>
+         
+        </div> */}
         <SpotifyGetPlaylists />
       </div>
     </div>
