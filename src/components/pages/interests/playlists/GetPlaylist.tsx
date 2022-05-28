@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import Button from '../../../Button'
 
 const PLAYLISTS_ENDPOINT = 'https://api.spotify.com/v1/me/playlists'
 
@@ -31,7 +32,12 @@ const SpotifyGetPlaylists = () => {
 
   return (
     <>
-      <button onClick={handleGetPlaylists}>Get Playlists</button>
+      <div onClick={handleGetPlaylists}>
+        <Button background="green" color="white">
+          <span className="font-black tracking-wide">SEE PLAYLISTS</span>
+        </Button>
+      </div>
+
       {data?.items ? data.items.map(item => <p>{item.name}</p>) : null}
     </>
   )

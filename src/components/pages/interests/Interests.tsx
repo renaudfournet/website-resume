@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { jsLogo } from '../../../assets/images'
 import { useEffect } from 'react'
 import GetPlaylist from './playlists/GetPlaylist'
+import Button from '../../Button'
 
 const clientID = process.env.REACT_APP_CLIENT_ID
 const SPOTIFY_AUTHORIZE_ENDPOINT = 'https://accounts.spotify.com/authorize'
@@ -30,7 +31,7 @@ function Interests(props: any) {
   //SHOW BUTTON
   const [show, setShow] = useState(false)
   const showMore = () => {
-    setShow(show)
+    setShow(!show)
   }
 
   /*http://localhost:3000/callback#access_token=BQDwOFdFJ43pDv_GUMjHSonP1PDe8Sc_ieyXQN4dyeWWP6LyFC6oTI6rMC_w6JKt_WfZvv8Pq-z_om4rpSK5ryhar0x9HSynDhKKvBNVAQ_yaBobRmVZ6uZiCQaDKW2lM3b-tq03l713UEtz0YK_ng&token_type=Bearer&expires_in=3600*/
@@ -53,7 +54,7 @@ function Interests(props: any) {
     window.location.href = `${SPOTIFY_AUTHORIZE_ENDPOINT}?client_id=${clientID}&redirect_uri=${REDIRECT_AFTER_LOGIN}&scope=${SCOPES_URL_PARAMS}&response_type=token&show_dialog=true`
   }
 
-  return show ? (
+  return !show ? (
     <div
       onMouseOver={showMore}
       className="relative p-10 w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 bg-white rounded-lg bg-secondary-100"
@@ -83,8 +84,10 @@ function Interests(props: any) {
       className="p-6 w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 flex flex-col bg-white rounded-lg bg-primary-100"
     >
       <div className="relative overflow-auto no-scrollbar">
-        <div className="text-left text-white-100">
-          <button onClick={handleLogin}>Login to SPOTIFY</button>
+        <div onClick={handleLogin} className="text-left text-white-100">
+          <Button background="green" color="white">
+            <span className="font-black tracking-wide">LOGIN SPOTIFY</span>
+          </Button>
           <GetPlaylist />
         </div>
       </div>
