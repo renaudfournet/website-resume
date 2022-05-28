@@ -5,12 +5,19 @@ import { jsLogo } from '../../../assets/images'
 import { useEffect } from 'react'
 import GetPlaylist from './playlists/GetPlaylist'
 import Button from '../../Button'
+import SpotifyGetPlaylists from './playlists/GetPlaylist'
 
 const clientID = process.env.REACT_APP_CLIENT_ID
 const SPOTIFY_AUTHORIZE_ENDPOINT = 'https://accounts.spotify.com/authorize'
 const REDIRECT_AFTER_LOGIN = 'http://localhost:3000/callback'
 const SPACE_DELIMITER = '%20'
-const SCOPES = ['user-read-currently-playing', 'user-read-playback-state', 'playlist-read-private']
+const SCOPES = [
+  'user-read-playback-state',
+  'streaming',
+  'user-read-email',
+  'user-read-private',
+  'user-modify-playback-state'
+]
 const SCOPES_URL_PARAMS = SCOPES.join(SPACE_DELIMITER)
 const newAccessToken = process.env.REACT_APP_SPOTIFY_TOKEN
 
@@ -85,10 +92,10 @@ function Interests(props: any) {
     >
       <div className="relative overflow-auto no-scrollbar">
         <div onClick={handleLogin} className="text-left text-white-100">
-          <Button background="green" color="white">
+          {/* <Button background="green" color="white">
             <span className="font-black tracking-wide">LOGIN SPOTIFY</span>
-          </Button>
-          <GetPlaylist />
+          </Button> */}
+          <SpotifyGetPlaylists />
         </div>
       </div>
     </div>
