@@ -90,7 +90,7 @@ function Description() {
             <Pie data={data} options={options} />
           </div>
           <div className="text-white-100 font-black text-left">SKILLS</div>
-          <div className="grid xxs:grid-cols-1  xs:grid-cols-2 md:grid-cols-3 text-white-100 xxs:mt-5 xs:mt-2 md:mt-2">
+          <div className="grid xxs:grid-cols-1  xs:grid-cols-3 md:grid-cols-3 text-white-100 xxs:mt-5 xs:mt-2 md:mt-2">
             <div className="text-left xs:pr-0 md:pr-2">
               <div>HTML / CSS</div>
               <div>React</div>
@@ -101,7 +101,6 @@ function Description() {
               <div>Bootstrap</div>
             </div>
             <div className="text-left xs:px-0 md:px-2">
-              <div>React</div>
               <div>Node JS</div>
               <div>Express</div>
               <div>MySQL</div>
