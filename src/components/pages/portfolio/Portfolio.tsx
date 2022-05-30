@@ -14,7 +14,7 @@ function Description() {
   return !show ? (
     <div
       onMouseOver={showMore}
-      className="relative flex bg-white w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 rounded-lg bg-primary-100"
+      className="relative flex bg-white w-80 h-80 xs:w-96 xs:h-96 md:w-96 md:h-96 rounded-lg bg-primary-100"
     >
       <div className=" p-10 overflow-auto no-scrollbar flex flex-col">
         <div className="h-32 flex justify-start">
@@ -36,7 +36,7 @@ function Description() {
   ) : (
     <div
       onMouseLeave={showMore}
-      className="relative w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 flex bg-white rounded-lg bg-primary-100 text-white-100"
+      className="relative w-80 h-80 xs:w-96 xs:h-96 md:w-96 md:h-96 flex bg-white rounded-lg bg-primary-100 text-white-100"
     >
       <div className="relative overflow-auto no-scrollbar">
         <div className="flex flex-col p-6">

@@ -13,7 +13,7 @@ function Infos() {
   return !show ? (
     <div
       onMouseOver={showMore}
-      className="flex bg-white-100 w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 rounded-lg"
+      className="flex bg-white-100 w-80 h-80 xs:w-96 xs:h-96 md:w-96 md:h-96 rounded-lg"
     >
       <div className="relative overflow-auto no-scrollbar">
         <div className="p-10">
@@ -36,7 +36,7 @@ function Infos() {
   ) : (
     <div
       onMouseLeave={showMore}
-      className="flex bg-white w-60 h-60 xs:w-96 xs:h-96 md:w-96 md:h-96 rounded-lg bg-white-100"
+      className="flex bg-white w-80 h-80 xs:w-96 xs:h-96 md:w-96 md:h-96 rounded-lg bg-white-100"
     >
       <div className="flex flex-col p-6 static ">
         <div>
