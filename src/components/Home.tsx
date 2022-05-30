@@ -52,10 +52,10 @@ function Home(props: any) {
             <Description />
           </div>
           <div>
-            <Experience />
+            <Portfolio />
           </div>
           <div>
-            <Portfolio />
+            <Experience />
           </div>
           <div className="lg:mb-10">
             <Etudes />
