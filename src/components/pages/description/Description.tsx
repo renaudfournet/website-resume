@@ -51,6 +51,19 @@ function Description() {
     setShow(!show)
   }
 
+  // SKILLS
+  const listFront = [
+    'HTML / CSS',
+    'React',
+    'React Native',
+    'Angular',
+    'Tailwind UI',
+    'Material UI',
+    'Bootstrap'
+  ]
+  const listBack = ['Node JS', 'Express', 'MySQL']
+  const listEnv = ['Git', 'Visual Studio Code', 'Agile (Scrum)', 'MacOS']
+
   return !show ? (
     <div
       onMouseOver={showMore}
@@ -83,27 +96,22 @@ function Description() {
             <Pie data={data} options={options} />
           </div>
           <div className="text-white-100 font-black text-left">SKILLS</div>
-          <div className="grid xxs:grid-cols-1  xs:grid-cols-3 md:grid-cols-3 text-white-100 xxs:mt-5 xs:mt-2 md:mt-2">
-            <div className="text-left xs:pr-0 md:pr-2">
-              <div>HTML / CSS</div>
-              <div>React</div>
-              <div>React Native</div>
-              <div>Angular</div>
-              <div>Tailwind UI</div>
-              <div>Material UI</div>
-              <div>Bootstrap</div>
+          <div className="grid grid-cols-1 text-white-100 xxs:mt-5 xs:mt-2 md:mt-2">
+            <div className="flex flex-col text-left">
+              <div className="font-bold mt-2">FRONT</div>
+              {listFront.map(item => (
+                <div>{item}</div>
+              ))}
+              <div className="font-bold mt-2">BACK</div>
+              {listBack.map(item => (
+                <div>{item}</div>
+              ))}
+              <div className="font-bold mt-2">ENVIRONNEMENT</div>
+              {listEnv.map(item => (
+                <div>{item}</div>
+              ))}
             </div>
-            <div className="text-left xs:px-0 md:px-2">
-              <div>Node JS</div>
-              <div>Express</div>
-              <div>MySQL</div>
-            </div>
-            <div className="text-left xs:pl-0 md:pl-2">
-              <div>Git</div>
-              <div>Visual Studio Code</div>
-              <div>Agile (Scrum)</div>
-              <div>MacOS</div>
-            </div>
+
             {/* <p className="flex justify-center font-bold text-1xl xs:text-2xl md:text-2xl text-white-100 mb-10">
             <FontAwesomeIcon className="px-2" icon={faGitSquare} />
             <FontAwesomeIcon className="px-2" icon={faGithubSquare} />

@@ -41,15 +41,15 @@ function Etudes() {
                 <div className="text-primary-100 font-extrabold">
                   FORMATION DÉVELOPPEUR WEB & MOBILE AVANCÉE
                 </div>
-                <div className="text-primary-100">septembre 2021 / mai 2022</div>
-                <div className="text-primary-100 italic">Remote</div>
+                <div className="text-black-100 ">septembre 2021 / mai 2022</div>
+                <div className="text-black-100  italic">Remote</div>
               </li>
               <li className="mt-2">
                 <div className="text-primary-100 font-extrabold">
                   FORMATION DÉVELOPPEUR WEB & MOBILE
                 </div>
-                <div className="text-primary-100">septembre 2020 / février 2021</div>
-                <div className="text-primary-100 italic">Anglet</div>
+                <div className="text-black-100 ">septembre 2020 / février 2021</div>
+                <div className="text-black-100  italic">Anglet</div>
               </li>
             </ul>
           </div>

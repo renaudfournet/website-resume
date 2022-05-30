@@ -4,7 +4,10 @@ function Profil() {
       <div className="flex">
         <div className="flex items-center text-left">
           <div>
-            <span className="text-lg font-black text-primary-100">RENAUD FOURNET.</span> <br />
+            <p className="text-lg font-black text-primary-100 text tracking-wider">
+              RENAUD FOURNET.
+            </p>
+            <br />
           </div>
         </div>
       </div>
