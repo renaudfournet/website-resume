@@ -35,10 +35,11 @@ function Infos() {
     </div>
   ) : (
     <div
+      style={{ transition: '2s' }}
       onMouseLeave={showMore}
       className="flex bg-white w-80 h-80 xs:w-96 xs:h-96 md:w-96 md:h-96 rounded-lg bg-white-100"
     >
-      <div className="flex flex-col p-6 static ">
+      <div style={{ transition: '2s' }} className="flex flex-col p-6 static ">
         <div>
           <p className="text-left  text-primary-100 font-black text-3xl">QUI SUIS-JE ?</p>
 

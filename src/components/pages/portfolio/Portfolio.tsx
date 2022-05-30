@@ -35,6 +35,7 @@ function Description() {
     </div>
   ) : (
     <div
+      style={{ transition: '2s' }}
       onMouseLeave={showMore}
       className="relative w-80 h-80 xs:w-96 xs:h-96 md:w-96 md:h-96 flex bg-white rounded-lg bg-primary-100 text-white-100"
     >
