@@ -15,9 +15,9 @@ function Footer() {
     { icon: faGithub, name: '@renaudfournet', link: 'https://www.linkedin.com/in/renaud-fournet/' }
   ]
   const listItems = contactList.map(({ icon, name, link }: IContactList) => (
-    <li>
+    <li className="text-left">
       <a href={link}>
-        <FontAwesomeIcon className="w-10" icon={icon} /> {name}
+        <FontAwesomeIcon icon={icon} /> &nbsp; {name}
       </a>
     </li>
   ))
@@ -31,7 +31,7 @@ function Footer() {
             PROJETS
           </p>
         </div>
-        <div className="text-left">
+        <div>
           <ul>{listItems}</ul>
         </div>
       </div>
