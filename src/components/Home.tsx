@@ -29,7 +29,7 @@ function Home(props: any) {
           <div className="flex justify-center xs:justify-start">
             <Profil />
           </div>
-          <div className="flex justify-center xs:justify-end">
+          <div className="flex items-center justify-center xs:justify-end">
             <a href="mailto:fournet.renaud@gmail.com">
               <Button>
                 <p className="font-black text-white-100 tracking-widest">ME CONTACTER</p>
