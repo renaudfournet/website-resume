@@ -57,10 +57,10 @@ function Home(props: any) {
           <div>
             <Portfolio />
           </div>
-          <div className="mb-10">
+          <div className="lg:mb-10">
             <Etudes />
           </div>
-          <div className="mb-10">
+          <div className="lg:mb-10">
             <Interests />
           </div>
         </div>
