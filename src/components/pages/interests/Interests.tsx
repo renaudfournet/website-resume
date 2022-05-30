@@ -5,7 +5,7 @@ import { jsLogo } from '../../../assets/images'
 // import GetPlaylist from './playlists/GetPlaylist'
 // import Button from '../../Button'
 // import SpotifyGetPlaylists from './playlists/GetPlaylist'
-import SpotifyGetPlaylists from './playlists/GetPlaylist'
+import SpotifyGetPlaylists from './playlists/SpotifyGetPlaylist'
 
 // const PLAYLISTS_ENDPOINT = 'https://api.spotify.com/v1/me/playlists'
 
@@ -89,7 +89,7 @@ function Interests(props: any) {
   ) : (
     <div
       onMouseLeave={showMore}
-      className="p-6 w-80 h-80 xs:w-96 xs:h-96 md:w-96 md:h-96 flex flex-col bg-white rounded-lg bg-primary-100"
+      className="p-6 w-80 h-80 xs:w-96 xs:h-96 md:w-96 md:h-96 flex flex-col bg-white rounded-lg bg-secondary-100"
     >
       <div className="relative overflow-auto no-scrollbar">
         {/* <div onClick={handleLogin} className="text-left text-white-100">

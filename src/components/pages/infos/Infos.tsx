@@ -18,7 +18,7 @@ function Infos() {
       <div className="relative overflow-auto no-scrollbar">
         <div className="p-10">
           <div className="mb-10 mt-8">
-            <p className="flex text-left  text-black-100 text-1xl xs:text-2xl sm:text-2xl">
+            <p className="flex text-left  text-black-100 text-1xl xs:text-1xl sm:text-1xl">
               <img alt="location" src={location} /> &nbsp; Bayonne, FR
             </p>
             <hr className="line-horizontal-blue mt-6 mb-4" />
@@ -35,11 +35,10 @@ function Infos() {
     </div>
   ) : (
     <div
-      style={{ transition: '2s' }}
       onMouseLeave={showMore}
       className="flex bg-white w-80 h-80 xs:w-96 xs:h-96 md:w-96 md:h-96 rounded-lg bg-white-100"
     >
-      <div style={{ transition: '2s' }} className="flex flex-col p-6 static ">
+      <div className="flex flex-col p-6 static ">
         <div>
           <p className="text-left  text-primary-100 font-black text-3xl">QUI SUIS-JE ?</p>
 

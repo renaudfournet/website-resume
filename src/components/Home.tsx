@@ -31,8 +31,8 @@ function Home(props: any) {
           </div>
           <div className="flex justify-center xs:justify-end">
             <a href="mailto:fournet.renaud@gmail.com">
-              <Button background="#365DED" color="black">
-                <span className="font-black text-white-100 tracking-wide">ME CONTACTER</span>
+              <Button>
+                <p className="font-black text-white-100 tracking-widest">ME CONTACTER</p>
               </Button>
             </a>
           </div>
@@ -43,8 +43,27 @@ function Home(props: any) {
           </p>
           <div className="vertical mt-20 md:mt-40"></div>
         </div>
-
-        <div className="grid justify-items-center md:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 xs:gap-8 gap-6 xs:-mt-0 lg:px-40 xs:px-0 pt-40 md:pt-72">
+        <div className="flex flex-wrap justify-center pt-40 md:pt-72">
+          <div className="m-5">
+            <Infos />
+          </div>
+          <div className="m-5">
+            <Description />
+          </div>
+          <div className="m-5">
+            <Portfolio />
+          </div>
+          <div className="m-5">
+            <Experience />
+          </div>
+          <div className="m-5 lg:mb-10">
+            <Etudes />
+          </div>
+          <div className="m-5 lg:mb-10">
+            <Interests />
+          </div>
+        </div>
+        {/* <div className="grid justify-items-center md:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 xs:gap-8 gap-6 xs:-mt-0  md:px-60 lg:px-60 pt-40 md:pt-72">
           <div>
             <Infos />
           </div>
@@ -63,7 +82,7 @@ function Home(props: any) {
           <div className="lg:mb-10">
             <Interests />
           </div>
-        </div>
+        </div> */}
         <div className="flex justify-center">
           <div className="mt-20 mb-20">
             <a
@@ -72,8 +91,8 @@ function Home(props: any) {
               download="Renaud_Fournet_resume"
             >
               <div>
-                <Button background="#365DED" color="white">
-                  <span className="font-black tracking-wide">TÉLÉCHARGER CV</span>
+                <Button>
+                  <p className="font-black tracking-widest">TÉLÉCHARGER CV</p>
                 </Button>
               </div>
             </a>
