@@ -18,7 +18,7 @@ function Etudes() {
         <div className="h-10 xs:h-32 md:h-32"></div>
 
         <div className="line-horizontal-blue mt-4 mb-4"></div>
-        <p className="flex text-left font-black text-1xl xs:text-4xl sm:text-4xl text-primary-100">
+        <p className="flex text-left font-black text-2xl xs:text-4xl sm:text-4xl text-primary-100">
           FORMATION
         </p>
       </div>

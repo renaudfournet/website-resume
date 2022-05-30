@@ -78,7 +78,7 @@ function Interests(props: any) {
         </div>
         <div className="line-horizontal-white mt-4 mb-4"></div>
         <div>
-          <p className="flex justify-start font-black text-1xl xs:text-4xl md:text-4xl text-white-100">
+          <p className="flex justify-start font-black text-2xl xs:text-4xl md:text-4xl text-white-100">
             HOBBIES
           </p>
         </div>

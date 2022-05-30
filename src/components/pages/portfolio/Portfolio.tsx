@@ -22,7 +22,7 @@ function Description() {
         </div>
         <div className="mb-10">
           <div className="line-horizontal-white mt-4 mb-4"></div>
-          <p className="flex text-left font-black text-1xl xs:text-4xl sm:text-4xl text-white-100">
+          <p className="flex text-left font-black text-2xl xs:text-4xl sm:text-4xl text-white-100">
             PROJETS
           </p>
         </div>
