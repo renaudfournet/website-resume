@@ -11,8 +11,8 @@ function Footer() {
       name: '@renaudfournet',
       link: 'https://www.linkedin.com/in/renaud-fournet/'
     },
-    { icon: faTwitter, name: '@ianyrneh', link: 'https://www.linkedin.com/in/renaud-fournet/' },
-    { icon: faGithub, name: '@renaudfournet', link: 'https://www.linkedin.com/in/renaud-fournet/' }
+    { icon: faTwitter, name: '@ianyrneh', link: 'https://twitter.com/anybotcandoit' },
+    { icon: faGithub, name: '@renaudfournet', link: 'https://github.com/renaudfournet' }
   ]
   const listItems = contactList.map(({ icon, name, link }: IContactList) => (
     <li className="text-left">

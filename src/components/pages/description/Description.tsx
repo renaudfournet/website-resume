@@ -1,14 +1,7 @@
-import {
-  faApple,
-  faBootstrap,
-  faGithubSquare,
-  faGitSquare,
-  faHtml5
-} from '@fortawesome/free-brands-svg-icons'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
-import { jsLogo, tailwindLogo, vscodeLogo } from '../../../assets/images'
+import { jsLogo } from '../../../assets/images'
 import { Pie } from 'react-chartjs-2'
 import 'chart.js/auto'
 
