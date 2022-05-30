@@ -55,6 +55,13 @@
   }
 }
 
+@media only screen and (max-width: 409px) {
+  .mobile-409px {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .App {
   text-align: center;
 }

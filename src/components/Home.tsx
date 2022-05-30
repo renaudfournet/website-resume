@@ -25,7 +25,7 @@ function Home(props: any) {
   return (
     <>
       <div className="main">
-        <div className="w-full xs:h-auto sm:h-30 md:h-30 lg:h-30 flex flex-wrap xxs:flex-col xs:flex-row  xs:justify-between px-7 mt-4">
+        <div className="w-full xs:h-auto sm:h-30 md:h-30 lg:h-30 flex flex-wrap mobile-409px xxs:flex-col xs:flex-row md:flex-row xs:justify-between px-7 mt-4">
           <div className="flex justify-center xs:justify-start">
             <Profil />
           </div>
@@ -43,7 +43,7 @@ function Home(props: any) {
           </p>
           <div className="vertical mt-20 md:mt-40"></div>
         </div>
-        <div className="flex flex-wrap justify-center pt-40 md:pt-72">
+        <div className="flex flex-wrap justify-center pt-40 md:pt-72 2xl:px-40">
           <div className="m-5">
             <Infos />
           </div>
