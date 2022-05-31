@@ -32,7 +32,7 @@ function Home(props: any) {
           <div className="flex items-center justify-center xs:justify-end">
             <a href="mailto:fournet.renaud@gmail.com">
               <Button>
-                <p className="font-black text-white-100 tracking-widest">ME CONTACTER</p>
+                <p className="font-black text-white-100">ME CONTACTER</p>
               </Button>
             </a>
           </div>
@@ -92,7 +92,7 @@ function Home(props: any) {
             >
               <div>
                 <Button>
-                  <p className="font-black tracking-widest">TÉLÉCHARGER CV</p>
+                  <p className="font-black">TÉLÉCHARGER MON CV</p>
                 </Button>
               </div>
             </a>

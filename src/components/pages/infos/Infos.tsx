@@ -22,8 +22,9 @@ function Infos() {
               <img alt="location" src={location} /> &nbsp; Bayonne, FR
             </p>
             <hr className="line-horizontal-blue mt-6 mb-4" />
-            <p className="flex text-left font-black text-2xl xs:text-4xl sm:text-4xl text-primary-100">
-              DÉVELOPPEUR FRONT END
+            <p className="flex flex-col text-left font-black text-2xl xs:text-4xl sm:text-4xl text-primary-100">
+              <span className="height-span">DÉVELOPPEUR</span>
+              <span>FRONT END</span>
             </p>
           </div>
           <div className="flex items-center text-primary-100 absolute p-4 bottom-0 right-0 ">

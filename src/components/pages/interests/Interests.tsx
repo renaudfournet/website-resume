@@ -69,10 +69,10 @@ function Interests(props: any) {
     >
       <div className="mb-10">
         <div className="flex xxs:h-16 xs:h-32 md:h-32 justify-start text-white-100 text-6xl xs:text-9xl sm:text-9xl  md:text-9xl">
-          <img className="w-14 md:w-14 pr-3" alt="javascript" src={music} />
-          <img className="w-14 md:w-14 pr-3" alt="javascript" src={windsurf} />
-          <img className="w-20 md:w-20 pr-3" alt="javascript" src={food} />
-          <img className="w-20 md:w-20 pr-3" alt="javascript" src={gaming} />
+          <img className="w-9 xs:w-10 md:w-10 mr-6" alt="javascript" src={music} />
+          <img className="w-9 xs:w-10 md:w-10 mr-6" alt="javascript" src={windsurf} />
+          <img className="w-12 xs:w-16 md:w-16 mr-6" alt="javascript" src={food} />
+          <img className="w-12 xs:w-16 md:w-16 mr-6" alt="javascript" src={gaming} />
         </div>
         <div className="line-horizontal-white mt-4 mb-4"></div>
         <div>

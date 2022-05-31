@@ -14,7 +14,7 @@ function Description() {
       {
         label: 'My First Dataset',
         data: [33, 33, 33],
-        backgroundColor: ['#DEFFF2', '#A5978B', '#8D5B4C'],
+        backgroundColor: ['#365DED', '#FFFFFF', '#C1F7D5'],
         borderWidth: 0
       }
     ]
@@ -91,7 +91,7 @@ function Description() {
       className="relative w-80 h-80 xs:w-96 xs:h-96 md:w-96 md:h-96 flex flex-col bg-white rounded-lg bg-secondary-100"
     >
       <div className="relative overflow-auto no-scrollbar">
-        <div className="flex flex-col justify-center xxs:px-10 xs:px-8 md:px-8 xxs:pt-5">
+        <div className="flex flex-col justify-center xxs:px-10 xs:px-8 md:px-8 xxs:pt-5 mb-2">
           <div>
             <Pie data={data} options={options} />
           </div>
