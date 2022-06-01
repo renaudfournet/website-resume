@@ -99,16 +99,26 @@ function Description() {
           <div className="grid grid-cols-1 text-white-100 xxs:mt-5 xs:mt-2 md:mt-2">
             <div className="flex flex-col text-left">
               <div className="font-bold mt-2">FRONT</div>
+
               {listFront.map(item => (
-                <div>{item}</div>
+                <div className="text-xs items-center font-bold px-3 py-1 bg-primary-100 text-white-100 rounded-full w-max mt-2 hover:text-secondary-100">
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                  {item}
+                </div>
               ))}
               <div className="font-bold mt-2">BACK</div>
               {listBack.map(item => (
-                <div>{item}</div>
+                <div className="text-xs items-center font-bold px-3 py-1 bg-primary-100 text-white-100 rounded-full w-max mt-2 hover:text-secondary-100">
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                  {item}
+                </div>
               ))}
               <div className="font-bold mt-2">ENVIRONNEMENT</div>
               {listEnv.map(item => (
-                <div>{item}</div>
+                <div className="text-xs items-center font-bold px-3 py-1 bg-primary-100 text-white-100 rounded-full w-max mt-2 hover:text-secondary-100">
+                  <line x1="1" y1="1" x2="23" y2="23"></line>
+                  {item}
+                </div>
               ))}
             </div>
 

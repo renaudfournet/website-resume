@@ -32,6 +32,9 @@ module.exports = {
         secondary: {
           100: '#100A31'
         },
+        green: {
+          100: '#009B72'
+        },
         white: {
           100: '#FFFFFF'
         },
