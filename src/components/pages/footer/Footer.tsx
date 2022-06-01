@@ -11,8 +11,8 @@ function Footer() {
       name: '@renaudfournet',
       link: 'https://www.linkedin.com/in/renaud-fournet/'
     },
-    { icon: faTwitter, name: '@vulesjerne', link: 'https://twitter.com/anybotcandoit' },
-    { icon: faGithub, name: '@renaudfournet', link: 'https://github.com/renaudfournet' }
+    { icon: faGithub, name: '@renaudfournet', link: 'https://github.com/renaudfournet' },
+    { icon: faTwitter, name: '@ianyrneh', link: 'https://twitter.com/anybotcandoit' }
   ]
   const listItems = contactList.map(({ icon, name, link }: IContactList) => (
     <li className="text-left">
@@ -28,7 +28,7 @@ function Footer() {
         <div>
           <div className="line-horizontal-white mb-4"></div>
           <p className="flex text-left font-black text-1xl xs:text-4xl sm:text-4xl text-white-100">
-            PROJETS
+            CONTACTS
           </p>
         </div>
         <div>
