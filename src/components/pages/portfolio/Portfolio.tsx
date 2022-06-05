@@ -44,6 +44,14 @@ function Description() {
             <ul>
               <li className="mt-4">
                 <div className="text-white-100 font-extrabold">
+                  WEATHER APP&nbsp;&nbsp; <FontAwesomeIcon icon={faCloudBolt} />
+                </div>
+                <div className="text-black-100">
+                  <a href="https://weather-app-renaud.netlify.app/">Weather-app</a>
+                </div>
+              </li>
+              <li className="mt-4">
+                <div className="text-white-100 font-extrabold">
                   BOT TWITTER&nbsp;&nbsp; <FontAwesomeIcon icon={faTwitter} />
                 </div>
                 <div className="text-black-100">
@@ -56,15 +64,8 @@ function Description() {
                   <FontAwesomeIcon icon={faChess} />
                 </div>
                 <div className="text-black-100">
-                  {' '}
                   <a href="https://alphajasonbot.netlify.app/">@AlphaJason</a>
                 </div>
-              </li>
-              <li className="mt-4">
-                <div className="text-white-100 font-extrabold">
-                  WEATHER APP&nbsp;&nbsp; <FontAwesomeIcon icon={faCloudBolt} />
-                </div>
-                <div className="text-black-100">Disconnected</div>
               </li>
             </ul>
           </div>
