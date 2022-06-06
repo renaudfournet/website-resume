@@ -16,9 +16,9 @@ function Infos() {
       className="flex p-10 relative bg-white-100 w-80 h-80 xs:w-96 xs:h-96 md:w-96 md:h-96 rounded-lg"
     >
       <div className="mb-10">
-        <div className="flex items-center h-16 xs:h-32 md:h-32 justify-start text-white-100 text-1xl xs:text-2xl sm:text-2xl md:text-2l">
-          <p className="flex text-left text-black-100 ">
-            <img alt="location" className="w-6" src={location} /> &nbsp; <span>Bayonne, FR</span>
+        <div className="flex items-center h-16 xs:h-32 md:h-32 justify-start text-white-100 text-1xl xs:text-1xl sm:text-1xl md:text-1l">
+          <p className="flex text-left text-black-100 mt-20">
+            <img alt="location" className="w-4" src={location} /> &nbsp; <span>Bayonne, FR</span>
           </p>
         </div>
         <hr className="line-horizontal-blue mt-6 mb-4" />
