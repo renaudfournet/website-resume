@@ -89,7 +89,7 @@ function Interests(props: any) {
   ) : (
     <div
       onMouseLeave={showMore}
-      className="p-6 w-80 h-80 xs:w-96 xs:h-96 md:w-96 md:h-96 flex flex-col bg-white rounded-lg bg-secondary-100"
+      className="p-2 w-80 h-80 xs:w-96 xs:h-96 md:w-96 md:h-96 flex flex-col rounded-lg bg-secondary-100"
     >
       <div className="relative overflow-auto no-scrollbar">
         {/* <div onClick={handleLogin} className="text-left text-white-100">
@@ -97,7 +97,9 @@ function Interests(props: any) {
             <span className="font-black tracking-wide">LOGIN SPOTIFY</span>
           </Button>
         </div> */}
-        <SpotifyGetPlaylists />
+        <div>
+          <SpotifyGetPlaylists />
+        </div>
       </div>
     </div>
   )

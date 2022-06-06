@@ -45,8 +45,8 @@ const SpotifyGetPlaylists = (props: any) => {
         token={token}
         uris={['spotify:album:6NMzokKOYpPO9VXDjmc5y6']}
       /> */}
-      <div className="flex justify-center">
-        <PlayWidget width={300} height={380} uri={'spotify:album:6NMzokKOYpPO9VXDjmc5y6'} />
+      <div className="flex justify-center rounded-lg">
+        <PlayWidget width={500} height={500} uri={'spotify:album:6NMzokKOYpPO9VXDjmc5y6'} />
       </div>
     </>
   )
