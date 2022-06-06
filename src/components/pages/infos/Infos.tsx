@@ -42,9 +42,8 @@ function Infos() {
           <p className="text-left  text-primary-100 font-black text-3xl">QUI SUIS-JE ?</p>
 
           <p className="text-left text-1xl text-primary-100">
-            Passionné de nouvelles technologies et toujours partant pour de nouveaux challenges,
-            j'aimerais enrichir et développer mes compétences en intégrant une entreprise et ainsi
-            contribuer à son développement et prendre part à des projets inspirants
+            Développeur web en reconversion passionné par le côté front end. Je partage mon temps
+            entre le code et la musique.
           </p>
         </div>
       </div>
