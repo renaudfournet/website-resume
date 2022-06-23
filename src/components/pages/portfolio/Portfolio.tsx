@@ -1,5 +1,5 @@
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
-import { faArrowRight, faChess, faCloudBolt } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faChartLine, faChess, faCloudBolt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
 import { projectIcon } from '../../../assets/images'
@@ -42,6 +42,14 @@ function Description() {
         <div className="flex flex-col p-6">
           <div className="text-left">
             <ul>
+              <li className="mt-4">
+                <div className="text-white-100 font-extrabold">
+                  CRYPTO APP&nbsp;&nbsp; <FontAwesomeIcon icon={faChartLine} />
+                </div>
+                <div className="text-black-100">
+                  <a href="https://crypto-app-portfolio-renaud.netlify.app/">Crypto-App</a>
+                </div>
+              </li>
               <li className="mt-4">
                 <div className="text-white-100 font-extrabold">
                   WEATHER APP&nbsp;&nbsp; <FontAwesomeIcon icon={faCloudBolt} />
