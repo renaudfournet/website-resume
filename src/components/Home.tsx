@@ -87,7 +87,7 @@ function Home(props: any) {
           <div className="mt-20 mb-20">
             <a
               onClick={notify}
-              href={require('../assets/files/Renaud_Fournet_CV_06_22.pdf')}
+              href={require('../assets/files/Renaud_Fournet_CV.pdf')}
               download="Renaud_Fournet_resume"
             >
               <div>
